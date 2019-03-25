@@ -1,0 +1,146 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #212121;
+  padding: 0;
+  margin: 0;
+  background: #fff;
+}
+* {
+  user-select: none;
+}
+input,
+label,
+span,
+p,
+i {
+  color: #43484b;
+}
+.filchart__wrap {
+  padding: 10px 5px 30px 5px;
+}
+.filchart__wrap h2 {
+  font: 600 22px Helvetica, Arial, sans-serif;
+}
+.filchart__wrap__chart {
+  position: relative;
+}
+.filchart {
+  background: #fff;
+}
+.filchart__charts {
+  background: #fff;
+  width: 380px;
+  margin: 0 auto;
+}
+.filchart__chart {
+  position: relative;
+}
+.filchart__line {
+  position: absolute;
+  background: transparent;
+  top: 0;
+}
+.filchart__preview {
+  margin-top: 10px;
+  background: #fff;
+  display: block;
+}
+.filchart__preview-controls {
+  margin-top: 10px;
+  background: transparent;
+  position: absolute;
+  top: 324px;
+}
+@media all and (min-width: 600px) {
+  .filchart__preview-controls {
+    cursor: pointer;
+  }
+}
+.checkbox {
+  position: relative;
+  display: inline-block;
+  margin: 20px 10px 0 0;
+}
+.checkbox input {
+  opacity: 0;
+  margin-left: 0px;
+  position: absolute;
+}
+.checkbox > label {
+  position: relative;
+  font-size: 16px;
+  min-height: 22px;
+  border: 1px solid #e7edf1;
+  border-radius: 20px;
+  padding: 6px 16px 6px 38px;
+  min-height: 22px;
+  line-height: 22px;
+  display: inline-block;
+  color: #43484b;
+  cursor: pointer;
+  user-select: none;
+}
+.checkbox > label > i {
+  border: 1px solid #47c23f;
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  width: 18px;
+  height: 18px;
+  border-radius: 20px;
+}
+.checkbox > input:first-child:checked + label > i:before {
+  content: '';
+  background: transparent;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 8px;
+  height: 4px;
+  margin: 5px auto;
+  transform: rotate(-45deg);
+}
+.checkbox > input:first-child:not(:checked) + label > i {
+  background: transparent !important;
+}
+.js-switch__theme {
+  background: #fff;
+  display: block;
+  width: calc(100% + 10px);
+  height: 70px;
+  line-height: 68px;
+  text-align: center;
+  color: #3f8be3;
+  cursor: pointer;
+  font-size: 20px;
+  position: sticky;
+  bottom: 0;
+  margin-left: -5px;
+}
+.js-active-night-mode .js-switch__theme {
+  background: #242f3e;
+}
+body.js-active-night-mode {
+  background: #242f3e;
+  color: #fff;
+}
+.js-active-night-mode .filchart__charts {
+  background: #242f3e;
+  color: #fff;
+}
+.js-active-night-mode span {
+  color: #e8ecee;
+}
+.js-active-night-mode p {
+  color: #fff;
+}
+.js-active-night-mode canvas {
+  background: transparent;
+}
+.js-active-night-mode .checkbox > label {
+  border-color: #546678 !important;
+}
